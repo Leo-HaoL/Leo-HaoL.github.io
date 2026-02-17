@@ -112,6 +112,33 @@ a:hover {
     color: #777;
 }
 
+/* Colored Social Media Icons */
+.contact-info .fa-envelope {
+    color: #D44638;
+}
+
+/* Gmail Red */
+.contact-info .fa-file-pdf {
+    color: #DC143C;
+}
+
+/* PDF Red */
+.contact-info .fa-google {
+    color: #4285F4;
+}
+
+/* Google Blue */
+.contact-info .fa-researchgate {
+    color: #00CCBB;
+}
+
+/* ResearchGate Cyan */
+.contact-info .fa-github {
+    color: #333;
+}
+
+/* GitHub Black */
+
 /* Main Content (Right) */
 .main-content {
     flex: 1;
@@ -163,6 +190,11 @@ a:hover {
 }
 
 /* Publications */
+.pub-list {
+    list-style-position: outside;
+    padding-left: 20px;
+}
+
 .pub-item {
     margin-bottom: 25px;
 }
