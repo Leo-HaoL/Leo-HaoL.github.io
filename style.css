@@ -9,7 +9,8 @@
     /* Maroon (subtle accent, optional) */
     --light-grey: #f8f9fa;
     --border-color: #eaeaea;
-    --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+        "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 
 body {
@@ -47,10 +48,10 @@ a:hover {
     width: 280px;
     flex-shrink: 0;
     padding-right: 40px;
-    /* Optional: Sticky Sidebar */
-    /* position: sticky;
-       top: 60px;
-       height: fit-content; */
+    /* Sticky Sidebar */
+    position: sticky;
+    top: 60px;
+    align-self: flex-start;
 }
 
 .profile-img-container {
@@ -70,18 +71,18 @@ a:hover {
     object-fit: cover;
 }
 
-.name-cn {
+.name-en {
     font-size: 1.8rem;
     font-weight: 600;
-    margin-bottom: 5px;
+    margin: 0 0 2px;
     line-height: 1.2;
 }
 
-.name-en {
-    font-size: 1.2rem;
-    font-weight: 400;
+.bio-text .name-cn {
+    font-size: 1.15rem;
     color: #666;
-    margin-bottom: 20px;
+    margin: 0 0 15px;
+    letter-spacing: 0.1em;
 }
 
 .bio-text p {
@@ -123,11 +124,11 @@ a:hover {
 }
 
 /* PDF Red */
-.contact-info .fa-google {
+.contact-info .fa-google-scholar {
     color: #4285F4;
 }
 
-/* Google Blue */
+/* Google Scholar Blue */
 .contact-info .fa-researchgate {
     color: #00CCBB;
 }
@@ -216,11 +217,14 @@ a:hover {
     font-size: 0.95rem;
 }
 
-.pub-venue {
-    font-style: italic;
+.pub-note {
+    font-size: 0.85rem;
     color: #666;
+    margin: 0 0 10px;
+}
+
+.more-link {
     font-size: 0.95rem;
-    margin-bottom: 5px;
 }
 
 .badge {
@@ -232,6 +236,12 @@ a:hover {
     border-radius: 4px;
     margin-left: 8px;
     font-weight: 500;
+    white-space: nowrap;
+}
+
+.badge.badge-highlight {
+    background: #fff4e5;
+    color: #8a4b00;
 }
 
 .pub-links {
@@ -246,11 +256,53 @@ a:hover {
 
 /* Education List */
 .edu-list {
-    padding-left: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.edu-list li {
-    margin-bottom: 15px;
+.edu-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.edu-logo {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+.edu-body {
+    flex: 1;
+}
+
+.edu-head {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0 12px;
+}
+
+.edu-date {
+    color: #666;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.edu-degree {
+    color: #444;
+    font-size: 0.95rem;
+}
+
+/* Footer */
+.site-footer {
+    border-top: 1px solid var(--border-color);
+    padding-top: 15px;
+    font-size: 0.85rem;
+    color: #888;
 }
 
 /* Responsive Design */
@@ -261,6 +313,7 @@ a:hover {
     }
 
     .sidebar {
+        position: static;
         width: 100%;
         padding-right: 0;
         margin-bottom: 40px;
@@ -277,6 +330,10 @@ a:hover {
 
     .main-content {
         padding-left: 0;
+    }
+
+    #about p {
+        text-align: left;
     }
 
     .award-list li {
