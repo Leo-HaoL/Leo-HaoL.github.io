@@ -165,18 +165,18 @@ a:hover {
     text-align: justify;
 }
 
-/* News List */
-.news-list {
+/* Honors & Awards List */
+.award-list {
     list-style: none;
     padding: 0;
 }
 
-.news-list li {
+.award-list li {
     display: flex;
     margin-bottom: 12px;
 }
 
-.news-list .date {
+.award-list .date {
     width: 100px;
     flex-shrink: 0;
     font-weight: 600;
@@ -184,7 +184,7 @@ a:hover {
     font-size: 0.95rem;
 }
 
-.news-list .news-text {
+.award-list .award-text {
     flex: 1;
     font-size: 0.95rem;
 }
@@ -279,11 +279,11 @@ a:hover {
         padding-left: 0;
     }
 
-    .news-list li {
+    .award-list li {
         flex-direction: column;
     }
 
-    .news-list .date {
+    .award-list .date {
         margin-bottom: 4px;
     }
-}
+}
